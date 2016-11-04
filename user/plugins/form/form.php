@@ -49,8 +49,13 @@ class FormPlugin extends Plugin
     {
         return [
             'onPluginsInitialized'   => ['onPluginsInitialized', 0],
-            'onTwigTemplatePaths'    => ['onTwigTemplatePaths', 0]
+            'onTwigTemplatePaths'    => ['onTwigTemplatePaths', 0],
+            'myaction' => ['myactionHandler',0]
         ];
+    }
+
+    public function myactionHandler($ev){
+        dump($ev);
     }
 
     /**

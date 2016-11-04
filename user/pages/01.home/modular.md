@@ -51,6 +51,9 @@ form:
         type : submit
         value : Enviar
     
+    process:
+    - myaction
+    
 ---
 
 
