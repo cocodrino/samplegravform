@@ -40,9 +40,14 @@ ol {
 }
 
 
-form#contactanos {
-    color: black;
-    margin: 0 auto;
-    background-color: white;
-    padding: 40px;
+.section-signup{
+    margin:8% !important;
+    background-color: white !important;
+    padding: 40px !important;
+}
+
+.espaciado{
+    margin-top: 40px;
+    background-color: #31308C !important;
+    border-color: #31308C !important;
 }

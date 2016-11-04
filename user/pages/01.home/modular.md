@@ -1,5 +1,5 @@
 ---
-title: Net4Email
+title: net4email
 menu: Home
 onpage_menu: true
 body_class: index
@@ -18,25 +18,48 @@ content:
             - _contact
 
 form:
-    action: /
-    name: contactanos
+    action: /home
+    name: contacto
     fields:
     -
         name: nombre
         label: Nombre
-        placeholder: 'Ingrese su Nombre'
+        placeholder: 'Ingrese ambos nombres'
         autofocus: 'on'
         autocomplete: 'on'
         type: text
         
+    -
+        name: apellido
+        label: Apellido
+        type: text
+        
+    -
+        name: correo
+        label: Correo Electrónico
+        type: email
+        validate:
+            required : true
+        
+    - 
+      name: telefono
+      label: Telefono
+      placeholder: 212-222-2222
+      type: text
+    
     buttons:
     -
         type : submit
         value : Enviar
     
     process:
-    -
-        message: "gracias por contactarnos"
+        - email:
+            from: "clagccs@gmail.com"
+            to: "{{ form.value.correo }}"
+            subject: "[Feedback] {{ form.value.nombre }}"
+            body: "FUNCIONO BIEN!!"
+        - message: Thank you for your feedback!
+        - display: thankyou
 ---
 
 

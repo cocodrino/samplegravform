@@ -55,6 +55,8 @@ class EmailPlugin extends Plugin
      */
     public function onFormProcessed(Event $event)
     {
+        $this->grav['debugger']->addMessage("esta funcionando ----------------------");
+        dump($event);
         $form = $event['form'];
         $action = $event['action'];
         $params = $event['params'];

@@ -1,113 +1,96 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1478104964,
-    'checksum' => '5ab54b41f6736c00173d6449b7f28d53',
+    'timestamp' => 1478267107,
+    'checksum' => '2aecf9cf6fe84b40ab3057909fb606f5',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1478090633
+                'modified' => 1478176405
             ],
             'plugins/email' => [
                 'file' => 'user/config/plugins/email.yaml',
-                'modified' => 1477197689
+                'modified' => 1478195716
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1478090411
+                'modified' => 1478176405
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1478091876
+                'modified' => 1478176405
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1478090633
+                'modified' => 1478176405
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1478104921
+                'modified' => 1478176405
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1477197689
+                'modified' => 1478176405
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1477197689
+                'modified' => 1478176405
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1477197689
+                'modified' => 1478176405
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1477197689
+                'modified' => 1478267056
             ]
         ],
         'user/plugins' => [
-            'plugins/email' => [
-                'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1477197689
-            ],
-            'plugins/error' => [
-                'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1477197690
-            ],
-            'plugins/problems' => [
-                'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1477197690
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
+                'modified' => 1478176407
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1478090517
+                'modified' => 1478176405
+            ],
+            'plugins/error' => [
+                'file' => 'user/plugins/error/error.yaml',
+                'modified' => 1478176407
+            ],
+            'plugins/email' => [
+                'file' => 'user/plugins/email/email.yaml',
+                'modified' => 1478176406
+            ],
+            'plugins/problems' => [
+                'file' => 'user/plugins/problems/problems.yaml',
+                'modified' => 1478176407
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1478090496
-            ],
-            'plugins/form' => [
-                'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1477197690
+                'modified' => 1478176407
             ]
         ]
     ],
     'data' => [
         'plugins' => [
-            'email' => [
+            'form' => [
                 'enabled' => true,
-                'from' => 'your@email.here',
-                'from_name' => NULL,
-                'to' => 'your@email.here',
-                'to_name' => NULL,
-                'mailer' => [
-                    'engine' => 'mail',
-                    'smtp' => [
-                        'server' => 'localhost',
-                        'port' => 25,
-                        'encryption' => 'none',
-                        'user' => '',
-                        'password' => ''
-                    ],
-                    'sendmail' => [
-                        'bin' => '/usr/sbin/sendmail'
+                'built_in_css' => true,
+                'files' => [
+                    'multiple' => false,
+                    'limit' => 10,
+                    'filesize' => 5,
+                    'destination' => 'self@',
+                    'avoid_overwriting' => false,
+                    'random_name' => false,
+                    'accept' => [
+                        0 => 'image/*'
                     ]
-                ],
-                'content_type' => 'text/html',
-                'debug' => false
-            ],
-            'error' => [
-                'enabled' => true,
-                'routes' => [
-                    404 => '/error'
                 ]
-            ],
-            'problems' => [
-                'enabled' => true,
-                'built_in_css' => true
             ],
             'admin' => [
                 'enabled' => true,
@@ -160,6 +143,38 @@ return [
                     ]
                 ]
             ],
+            'error' => [
+                'enabled' => true,
+                'routes' => [
+                    404 => '/error'
+                ]
+            ],
+            'email' => [
+                'enabled' => true,
+                'from' => 'correosmasivos@netquatro.com',
+                'from_name' => 'correo masivo',
+                'to' => 'correosmasivos@netquatro.com',
+                'to_name' => 'correo masivo',
+                'mailer' => [
+                    'engine' => 'mail',
+                    'smtp' => [
+                        'server' => 'mail.netquatro.com',
+                        'port' => 25,
+                        'encryption' => 'none',
+                        'user' => 'correosmasivos',
+                        'password' => 'correosmasivos0q*'
+                    ],
+                    'sendmail' => [
+                        'bin' => '/usr/sbin/sendmail'
+                    ]
+                ],
+                'content_type' => 'text/html',
+                'debug' => true
+            ],
+            'problems' => [
+                'enabled' => true,
+                'built_in_css' => true
+            ],
             'login' => [
                 'enabled' => true,
                 'built_in_css' => true,
@@ -198,21 +213,6 @@ return [
                     'enabled' => true,
                     'timeout' => 604800,
                     'name' => 'grav-rememberme'
-                ]
-            ],
-            'form' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'files' => [
-                    'multiple' => false,
-                    'limit' => 10,
-                    'filesize' => 5,
-                    'destination' => 'self@',
-                    'avoid_overwriting' => false,
-                    'random_name' => false,
-                    'accept' => [
-                        0 => 'image/*'
-                    ]
                 ]
             ]
         ],
