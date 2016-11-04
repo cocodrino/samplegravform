@@ -21,8 +21,13 @@ class EmailPlugin extends Plugin
         return [
             'onPluginsInitialized' => ['onPluginsInitialized', 0],
             'onFormProcessed' => ['onFormProcessed', 0],
+            'onTask.net4email.contacto' => ['prueba',0],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0]
         ];
+    }
+
+    public static function prueba($ev){
+        dump($ev);
     }
 
     /**

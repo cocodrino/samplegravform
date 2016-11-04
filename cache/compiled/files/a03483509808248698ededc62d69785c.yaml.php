@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/home/netquatro/Descargas/landingpage/landig/system/config/system.yaml',
-    'modified' => 1478267056,
+    'modified' => 1478271274,
     'data' => [
         'absolute_urls' => false,
         'timezone' => '',
@@ -134,13 +134,13 @@ return [
             ]
         ],
         'errors' => [
-            'display' => 0,
+            'display' => 1,
             'log' => true
         ],
         'debugger' => [
             'enabled' => true,
             'shutdown' => [
-                'close_connection' => true
+                'close_connection' => false
             ]
         ],
         'images' => [

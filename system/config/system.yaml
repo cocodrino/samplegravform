@@ -100,13 +100,13 @@ assets:                                     # Configuration for Assets Manager (
     jquery: system://assets/jquery/jquery-2.x.min.js
 
 errors:
-  display: 0                                # Display either (1) Full backtrace | (0) Simple Error | (-1) System Error
+  display: 1                                # Display either (1) Full backtrace | (0) Simple Error | (-1) System Error
   log: true                                 # Log errors to /logs folder
 
 debugger:
   enabled: true                            # Enable Grav debugger and following settings
   shutdown:
-    close_connection: true                  # Close the connection before calling onShutdown(). false for debugging
+    close_connection: false                  # Close the connection before calling onShutdown(). false for debugging
 
 images:
   default_image_quality: 85                 # Default image quality to use when resampling images (85%)

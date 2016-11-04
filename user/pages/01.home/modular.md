@@ -1,5 +1,5 @@
 ---
-title: net4email
+title: myproject
 menu: Home
 onpage_menu: true
 body_class: index
@@ -18,7 +18,6 @@ content:
             - _contact
 
 form:
-    action: /home
     name: contacto
     fields:
     -
@@ -52,14 +51,6 @@ form:
         type : submit
         value : Enviar
     
-    process:
-        - email:
-            from: "clagccs@gmail.com"
-            to: "{{ form.value.correo }}"
-            subject: "[Feedback] {{ form.value.nombre }}"
-            body: "FUNCIONO BIEN!!"
-        - message: Thank you for your feedback!
-        - display: thankyou
 ---
 
 
